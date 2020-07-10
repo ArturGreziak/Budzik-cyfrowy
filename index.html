@@ -23,7 +23,7 @@
         let czas = (document.getElementById('czas').innerHTML = getTime())
         czas2 = document.querySelector('.czas2').value + ':00'
         if (czas2 === czas) {
-          alert('Pobudka wstać!!')
+          new Audio('http://artur-greziak.pl/muzyka/Alarm.mp3').play()
         }
       }, 1000)
     </script>
