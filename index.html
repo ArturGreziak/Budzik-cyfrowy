@@ -16,16 +16,16 @@
       function getTime() {
         return new Date().toLocaleTimeString()
       }
-      let czas2 = document.querySelector('czas2')
+      let czas2 //Usunąłem deklaracje czas2 "= document.querySelector('czas2')"
       document.getElementById('czas').innerHTML = getTime()
 
       setInterval(function () {
         let czas = (document.getElementById('czas').innerHTML = getTime())
+        czas2 = document.querySelector('.czas2').value + ':00'
+        if (czas2 === czas) {
+          console.log('OK')
+        }
       }, 1000)
-
-      if (czas2 === czas) {
-        console.log('OK')
-      }
     </script>
   </body>
 </html>
