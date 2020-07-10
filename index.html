@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="czas"></div>
+    <label>
+      <input type="time" class="czas2" />
+    </label>
+
+    <script type="text/javascript">
+      function getTime() {
+        return new Date().toLocaleTimeString()
+      }
+      let czas2 = document.querySelector('czas2')
+      document.getElementById('czas').innerHTML = getTime()
+
+      setInterval(function () {
+        let czas = (document.getElementById('czas').innerHTML = getTime())
+      }, 1000)
+
+      if (czas2 === czas) {
+        console.log('OK')
+      }
+    </script>
+  </body>
+</html>
